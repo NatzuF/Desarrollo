@@ -1,0 +1,30 @@
+.mi-caja {
+    background-color: #1e1a24;
+    color: #ffffff;
+    border: 2px solid #8e62c7;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+form label{
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: #1e1a24;
+    color: #ffffff;
+    border: 2px solid #8e62c7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    background-color: #8e62c7;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
