@@ -7,6 +7,11 @@
     border-radius: 20px;
 }
 
+nav ul {
+    padding: 0;
+    list-style-position: inside;
+}
+
 form label{
     display: inline-block;
     width: 150px;
@@ -27,4 +32,25 @@ legend {
     padding: 5px 15px;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.btn-enviar {
+    background-color: #8e62c7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cabecera-principal {
+    text-align: center;
+    border-bottom: 2px solid #8e62c7;
+    padding-bottom: 20px;
+}
+
+#formulario-datos {
+    max-width: 500px;
+    margin: 0 auto;
 }
