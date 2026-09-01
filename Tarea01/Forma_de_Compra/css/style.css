@@ -1,0 +1,124 @@
+:root {
+    --color-deepspace: #622872;
+    --color-crimson: #caa5cb;
+    --color-lavender: #e8ddea;
+    --color-rose-white: #faeaf6
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-deepspace);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-container, .result-container {
+    background-color: var(--color-rose-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-deepspace);
+    margin-bottom: 1.5rem;
+    border-bottom: 0.2rem solid var(--color-crimson);
+    padding-bottom: 10px;
+}
+
+fieldset {
+    border: 2px solid var(--color-lavender);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #ffffff;
+}
+
+legend {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: var(--color-lavender);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-deepspace);
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-crimson);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--color-rose-white);
+    color: var(--color-deepspace);
+    font-weight: 500;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--color-deepspace);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-deepspace);
+    box-shadow: 0 0 5px var(--color-crimson);
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+button, .btn-volver {
+    background-color: var(--color-deepspace);
+    color: var(--color-rose-white);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, .btn-volver:hover {
+    background-color: var(--color-crimson);
+    color: var(--color-deepspace);
+}
+
+#lista-datos {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-datos li {
+    padding: 12px;
+    border-bottom: 1px solid var(--color-lavender);
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+#lista-datos li strong {
+    color: var(--color-deepspace);
+}
