@@ -1,3 +1,18 @@
+function mostrarPestana(boton, idPestana) {
+    let contenidos = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < contenidos.length; i++) {
+        contenidos[i].classList.remove("active");
+    }
+
+    let botones = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < botones.length; i++) {
+        botones[i].classList.remove("active");
+    }
+
+    document.getElementById(idPestana).classList.add("active");
+    boton.classList.remove("active");
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const lista = document.getElementById('lista-datos');

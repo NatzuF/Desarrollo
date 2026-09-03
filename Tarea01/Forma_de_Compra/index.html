@@ -11,47 +11,74 @@
 <body>
 
     <div class="form-container">
-        <h1>Datos del Crédito</h1>
+        <h1>Financiera Huanca</h1>
         <!-- Envia los datos por el GET -->
-        <form action="html/resultado.html">
-            <fieldset>
-                <legend>Información General</legend>
-                <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha" name="fecha" required>
-            </fieldset>
 
-            <fieldset>
-                <legend>Detalles del Préstamo</legend>
-                <p>Moneda:</p>
-                <label>
-                    <input type="radio" name="moneda" value="Soles" required>Soles:> Soles (S/.)
-                </label>
-                <label>
-                    <input type="radio" name="moneda" value="Dolares"> Dólares (US%)
-                </label>
+        <div class="tabs">
+            <button type="button" class="tab-btn" onclick="mostrarPestana(this, 'personales')">Datos personales</button>
+            <button type="button" class="tab-btn active" onclick="mostrarPestana(this, 'credito')">Datos crédito</button>
+        </div>
 
-                <br><br>
+        <form action="html/resultado.html" method="GET">
+            <div id="personales" class="tab-content">
+                <fieldset>
+                    <legend>Información del Cliente</legend>
+                    <label for="nombres">Nombres completos:</label>
+                    <input type="text" id="nombres" name="nombres">
 
-                <label for="monto">Monto:</label>
-                <input type="number" id="monto" name="monto" required>
+                    <label for="documento">CURP:</label>
+                    <input type="text" id="documento" name="documento">
 
-                <label for="cuota">Cuota:</label>
-                <input type="number" step="0.01" id="cuota" name="cuota" required>
-            </fieldset>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="text" id="correo" name="correo">
+                </fieldset>
+            </div>
 
-            <fieldset>
-                <legend>Tasas y Vencimiento</legend>
-                <label for="tea">Tea (%):</label>
-                <input type="number" step="0.01" id="tea" name="tea">
+            <div id="credito" class="tab-content active">
+                <fieldset>
+                    <legend>Información General</legend>
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </fieldset>
 
-                <label for="fecha_vencimiento">Fecha de Vencimiento:</label>
-                <input type="date" id="fecha_vencimiento" name="fecha_vencimiento">
-            </fieldset>
+                <fieldset>
+                    <legend>Detalles del Préstamo</legend>
+                    <p>Moneda:</p>
+                    <label>
+                        <input type="radio" name="moneda" value="Soles">Soles (S/.)
+                    </label>
+                    <label>
+                        <input type="radio" name="moneda" value="Dolares"> Dólares (US%)
+                    </label>
+
+                    <br><br>
+
+                    <label for="monto">Monto:</label>
+                    <input type="number" id="monto" name="monto">
+
+                    <label for="periodo">Periodo (meses):</label>
+                    <input type="number" id="periodo" name="periodo">
+
+                    <label for="cuota">Cuota:</label>
+                    <input type="number" step="0.01" id="cuota" name="cuota">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tasas y Vencimiento</legend>
+                    <label for="tea">Tea (%):</label>
+                    <input type="number" step="0.01" id="tea" name="tea">
+
+                    <label for="fecha_vencimiento">Fecha de Vencimiento:</label>
+                    <input type="date" id="fecha_vencimiento" name="fecha_vencimiento">
+                </fieldset>
+            </div>
 
             <div class="button-group">
-                <button type="submit">Aceptar</button>
+                <button type="submit">ACEPTAR</button>
             </div>
         </form>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
